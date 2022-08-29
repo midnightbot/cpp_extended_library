@@ -74,7 +74,30 @@ sort(arr.being(), arr.end());
 ///////////////////////////// Array  /////////////////////////////
 
 ///////////////////////////// Linked Lists  /////////////////////////////
+class Node {
+    public:
+        int val;
+        Node* next;
+};
 
+Node* head = new Node();
+Node* node1 = new Node();
+Node* node2 = new Node();
+Node* node3 = new Node();
+
+node1->val = 10;
+node2->val = 11;
+node3->val = 12;
+
+node1->next = node2;
+node2->next = node3;
+node3->next = NULL;
+
+head = node1;
+while (head!=NULL) {
+    cout << head->val << "  ";
+    head = head->next;
+}
 ///////////////////////////// Hash tables /////////////////////////////
 
 ///////////////////////////// Tries  /////////////////////////////
@@ -167,5 +190,4 @@ Student s1;
 s1.name = "Anish";
 s1.roll_number = 1;
 PrintStudentInfo(s1);
-
 ///////////////////////////// Classes /////////////////////////////
